@@ -36,6 +36,7 @@ export default function RootLayout({
           <div className="flex gap-6 text-sm font-semibold">
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
+            <Link href="/order">Order</Link>
             <Link href="/contact">Contact</Link>
           </div>
         </nav>
