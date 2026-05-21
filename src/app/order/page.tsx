@@ -53,6 +53,9 @@ export default function Order() {
       <p className="text-zinc-500 mb-8">
         Pick your cookies and we&#39;ll handle the rest 🍪
       </p>
+      <p className="text-zinc-500 mb-8">
+        * All Products Made Peanut Free in a Peanut Free Environment!
+      </p>
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">6 Piece Boxes</h2>
