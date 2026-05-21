@@ -36,6 +36,17 @@ export default function Order() {
     );
   }
 
+  async function handleCheckout() {
+    const response = await fetch("/api/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: cart }),
+    });
+
+    const data = await response.json();
+    window.location.href = data.url;
+  }
+
   return (
     <main className="max-w-2xl mx-auto py-16 px-6">
       <h1 className="text-3xl font-bold mb-2">Place an Order</h1>
@@ -46,21 +57,27 @@ export default function Order() {
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">6 Piece Boxes</h2>
         <div className="flex flex-col gap-3">
-          {sixPc.map((product) => ProductCard(product))}
+          {sixPc.map((product) => (
+            <div key={product.id}>{ProductCard(product)}</div>
+          ))}
         </div>
       </section>
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">12 Piece Boxes</h2>
         <div className="flex flex-col gap-3">
-          {twelvePc.map((product) => ProductCard(product))}
+          {twelvePc.map((product) => (
+            <div key={product.id}>{ProductCard(product)}</div>
+          ))}
         </div>
       </section>
 
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">Mix and Match Boxes</h2>
         <div className="flex flex-col gap-3">
-          {mix.map((product) => ProductCard(product))}
+          {mix.map((product) => (
+            <div key={product.id}>{ProductCard(product)}</div>
+          ))}
         </div>
       </section>
 
@@ -90,7 +107,10 @@ export default function Order() {
               ${cart.reduce((sum, item) => sum + item.price, 0).toFixed(2)}
             </span>
           </div>
-          <button className="w-full bg-pink-400 hover:bg-pink-500 text-white font-semibold py-3 rounded-lg transition-colors">
+          <button
+            onClick={handleCheckout}
+            className="w-full bg-pink-400 hover:bg-pink-500 text-white font-semibold py-3 rounded-lg transition-colors"
+          >
             Checkout
           </button>
         </div>
