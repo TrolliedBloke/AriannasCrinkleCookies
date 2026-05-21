@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,19 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <nav className="flex items-center justify-between px-8 py-4 bg-rose-100 text-black [text-stroke:2px_white] [-webkit-text-stroke:1px_white]">
+          <span className="font-bold text-lg">
+            Arianna&#39;s Crinkle Cookies
+          </span>
+          <div className="flex gap-6 text-sm font-semibold">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
