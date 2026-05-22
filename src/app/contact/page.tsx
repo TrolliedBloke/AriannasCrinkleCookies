@@ -48,34 +48,35 @@ export default function Contact() {
     /* form layout with tailwind for name, email, phone, and message */
   }
   return (
-    <main className="max-w-x1 mx-auto py-16 px-6">
-      <h1 className="text-3xl font-bold mb-2">Get in Touch</h1>
-      <p className="text-zinc-500 mb-8">
-        Fill out the form and we&apos;ll get back to you!
-      </p>
+    <main className="max-w-xl text-white mx-auto py-16 px-6">
+      <h1 className="text-3xl font-bold mb-2 ">Get in Touch</h1>
+      <p className=" mb-8">Fill out the form and we&apos;ll get back to you!</p>
 
-      <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col gap-4 shadow-2xl rounded-lg px-6 py-6 border-2 border-white"
+        onSubmit={handleSubmit}
+      >
         <div className="flex flex-col gap-1">
           <label className="text-sm font-semibold">Name</label>
           <input
             type="text"
-            placeholder="Your Name"
+            placeholder="Name"
             className="border rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-pink-300"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div>
+        <div className="flex flex-row gap-2">
           <label className="text-sm font-semibold">Email</label>
           <input
             type="email"
-            placeholder="Your Email"
+            placeholder="Email"
             className="border rounded-lg px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-pink-300"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div>
+        <div className="flex flex-row gap-2">
           <label className="text-sm font-semibold">Phone Number</label>
           <input
             type="tel"
@@ -102,7 +103,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 rounded-lg transition-colors"
+            className="rounded-xl bg-pink-600 px-5 py-3 m-3 font-semibold text-white shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-pink-500 hover:shadow-xl hover:shadow-pink-500/50 active:translate-y-0"
           >
             {/* while request is processing => user feedback that is is working */}
             {loading ? "Sending..." : "Send Message"}
