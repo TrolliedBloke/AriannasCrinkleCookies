@@ -10,7 +10,7 @@ export async function POST(request: Request) {
   const { name, email, phone, message } = await request.json();
 
   await resend.emails.send({
-    from: "Contact Form <onboarding@resend.dev>",
+    from: "Arrianas Crinkle Cookies <hello@arrianascrinklecookies.com>",
     to: "GabrielChi@icloud.com",
     subject: `New Message From ${name}`,
     html: `
