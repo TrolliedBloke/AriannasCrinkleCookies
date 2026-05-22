@@ -17,6 +17,13 @@ export default function About() {
             className="rounded-xl"
           ></Image>
         </div>
+        <p className="text-lg m-6 p-3 text-white shadow-xl rounded-xl">
+          Crinkle Cookies may have originated in the U.S., but they became a
+          beloved treat in the Philippines, where my mom remembers enjoying them
+          as a rare and special dessert from her childhood. I started baking
+          them whenever she craved a taste of home, and in early 2024, I turned
+          that love into a small home business.
+        </p>
       </div>
     </main>
   );
