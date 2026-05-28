@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <nav className="flex items-center justify-between px-8 py-4 bg-pink-300 text-white shadow-xl">
           <span className="font-bold text-2xl">
-            Arianna&#39;s Crinkle Cookies
+            Arriana&#39;s Crinkle Cookies
           </span>
           <div className="flex gap-6 text-md font-semibold">
             <Link href="/">Home</Link>
