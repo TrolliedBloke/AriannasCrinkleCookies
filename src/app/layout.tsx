@@ -29,7 +29,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <nav className="flex items-center justify-between px-8 py-4 bg-[rgb(51.4% 0.222 16.935)]-100 text-white shadow-md">
+        <nav className="flex items-center justify-between px-8 py-4 bg-pink-300 text-white shadow-xl">
           <span className="font-bold text-2xl">
             Arianna&#39;s Crinkle Cookies
           </span>

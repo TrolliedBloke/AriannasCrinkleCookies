@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import FloatingHeartsBackground from "@/lib/Floatingheartsbackground";
 
 export default function Contact() {
   {
@@ -48,7 +49,7 @@ export default function Contact() {
     /* form layout with tailwind for name, email, phone, and message */
   }
   return (
-    <main className="max-w-xl text-white mx-auto py-16 px-6">
+    <main className="max-w-xl text-white mx-auto py-16 px-6 oppacity-100">
       <h1 className="text-3xl font-bold mb-2 ">Get in Touch</h1>
       <p className=" mb-8">Fill out the form and we&apos;ll get back to you!</p>
 
